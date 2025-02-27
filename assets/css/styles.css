@@ -1,0 +1,400 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131720;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0.9375rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb( 5 8 22 );
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(245, 222, 179, 0.500);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(245, 222, 179, 0.750);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(245, 222, 179, 1);
+}
+
+img {
+    color: wheat;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.topnav {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.website-icon {
+    height: 1.5rem;
+}
+
+.website-title {
+    color: wheat;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#query {
+    padding: 0.75em 1.25em;
+    border-radius: 10px;
+    border: none;
+    background-color: #171e2f;
+    color: grey;
+    outline: none;
+}
+
+.movie-list--container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    min-height: 50vh;
+    min-width: 300px;
+    flex-basis: calc(25% - 20px);
+    background-color: #171e2f;
+    padding: 15px;
+    flex-grow: 1;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 250ms ease-in-out;
+}
+
+.card--hover:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail {
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 16 / 20;
+    object-fit: cover;
+}
+
+.movie-title {
+    color: wheat;
+    display: inline-block;
+    letter-spacing: 0.1rem;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.movie-avg-vote {
+    color: rgba(128, 128, 128, 0.512);
+    font-weight: bold;
+}
+
+.high-avg-vote {
+    color: green;
+}
+
+.medium-avg-vote {
+    color: goldenrod;
+}
+
+.low-avg-vote {
+    color: tomato;
+}
+
+.movie-total-vote {
+    color: rgba(128, 128, 128, 0.512);
+}
+
+.movie-release-date {
+    color: rgba(128, 128, 128, 0.512);
+}
+
+.no-movies-found {
+    color: tomato;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.review--heading {
+    color: wheat;
+    margin: 1rem 0;
+}
+
+#movie-title {
+    color: wheat;
+}
+
+.movie-details {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.movie-poster {
+    width: 25%;
+    max-height: 550px;
+    aspect-ratio: 2 / 3;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.detail--sub-heading {
+    color: rgba(128, 128, 128, 0.512);
+    font-size: medium;
+}
+
+.tmdb-score {
+    font-size: medium;
+    opacity: 0.512;
+}
+
+.tmdb-avg-score {
+    color: wheat;
+}
+
+.movie-overview-container {
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.movie-overview {
+    color: rgba(128, 128, 128, 0.512);
+}
+
+.reviews-wrapper {
+    color: wheat;
+}
+
+.reviews-continer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.review-card {
+    flex-basis: calc(33.33% - 10px);
+    min-height: 30%;
+    flex-grow: 1;
+    color: wheat;
+    background-color: #171e2f;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+}
+
+.review {
+    color: rgba(128, 128, 128, 0.512);
+}
+
+.user-control-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.review-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.review-card button {
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 250ms ease-in-out;
+}
+
+.edit-btn {
+    background-color: wheat;
+    border: 1px solid wheat;
+    margin-top: 1rem;
+    opacity: 0.512;
+}
+
+.edit-btn:hover {
+    background-color: transparent;
+    color: wheat;
+}
+
+.del-btn {
+    background-color: #ed8585;
+    border: 1px solid #ed8585;
+    margin-top: 1rem;
+    opacity: 0.512;
+}
+
+.del-btn:hover {
+    background-color: transparent;
+    color: #ed8585;
+}
+
+.edit-review-container {
+    display: grid !important;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+
+.edit-review-labels {
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-review-inputs {
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    border: none;
+    background-color: wheat;
+    margin-left: 5px;
+    color: #171e2f;
+}
+
+.edit-review-textarea-input {
+    min-height: 200px;
+    resize: none;
+    font-size: 1rem;
+}
+
+.save-edit-btn {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    grid-column: 2 / -1;
+    border-radius: 10px;
+    background-color: wheat;
+    color: #171e2f;
+    border: 1px solid wheat;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.save-edit-btn:hover {
+    background-color: transparent;
+    color: wheat;
+}
+
+.go-back-btn {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    grid-column: 1 / 2;
+    border-radius: 10px;
+    background-color: #ed8585;
+    color: #171e2f;
+    border: 1px solid #ed8585;
+    opacity: 0.512;
+    cursor: pointer;
+    height: 100%;
+    transition: all 250ms ease-in-out;
+}
+
+.go-back-btn:hover {
+    background-color: transparent;
+    color: #ed8585;
+}
+
+.add-review-container {
+    color: wheat;
+}
+
+.add-review-btn {
+    opacity: 1;
+}
+
+.add-user-name-input, .add-review-textarea {
+    background-color: rgba(128, 128, 128, 0.512);
+}
+
+.footer-text {
+    margin: 25px 0;
+    font-size: 14px;
+    text-align: center;
+    color: grey;
+}
+
+.tmdb-movie-link {
+    text-decoration: underline;
+    font-size: 1rem;
+    color: rgba(128, 128, 128, 0.512);
+}
+
+@media (max-width: 422px) and (min-width: 390px) {
+    .website-title {
+        font-size: 1rem;
+    }
+     
+    .card--hover:hover {
+        transform: scale(1.01);
+    }
+
+    .movie-details {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 389px) {
+    .website-title {
+        display: none;
+    }
+
+    .movie-details {
+        flex-direction: column;
+    }
+}
