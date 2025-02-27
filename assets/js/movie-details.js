@@ -27,7 +27,7 @@ function returnMovieDetails(url) {
 
                         <div class="add-review-container">
                             <div class="edit-review-container">
-                                <label class="edit-review-labels" for="new-user-input-id">User: </label>
+                                <label class="edit-review-labels" for="new-user-input-id">Name: </label>
                                 <input class="edit-review-inputs add-user-name-input" type="text" id="new-user-input-id" />
 
                                 <label class="edit-review-labels" for="new-review-input-id">Review: </label>
@@ -147,7 +147,7 @@ function editReview(editBtn) {
     fetch(REVIEWAPILINK + id).then(res => res.json()).then(function(data) {
         reviewCard.innerHTML = `
             <div class="edit-review-container">
-                <label class="edit-review-labels" for="${userInputId}">User: </label>
+                <label class="edit-review-labels" for="${userInputId}">Name: </label>
                 <input class="edit-review-inputs" type="text" id="${userInputId}" value="${data.user}"/>
     
                 <label class="edit-review-labels" for="${reviewInputId}">Review: </label>
