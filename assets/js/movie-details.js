@@ -196,9 +196,9 @@ function hexToRgb(hex) {
   return { r, g, b };
 }
 
-setTimeout(() => {
-  returnReviews(REVIEWAPILINK);
-}, 500);
+// setTimeout(() => {
+//   returnReviews(REVIEWAPILINK);
+// }, 500);
 
 function returnReviews(url) {
   fetch(url + "movie/" + movieId)
